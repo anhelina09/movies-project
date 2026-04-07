@@ -1,0 +1,6 @@
+asgiref==3.11.1
+Django==6.0.3
+pillow==12.2.0
+sqlparse==0.5.5
+git add requirements.txt
+git commit -m "Додано список залежностей (requirements.txt)"
