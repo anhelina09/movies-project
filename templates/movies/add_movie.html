@@ -1,0 +1,16 @@
+{% extends 'movies/base.html' %}
+
+{% block title %}Додати фільм{% endblock %}
+
+{% block content %}
+    <h2>Додати новий фільм</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зберегти</button>
+    </form>
+
+    <br>
+    <a href="{% url 'movies_list' %}">← Назад</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'movies/base.html' %}
+
+{% block title %}{{ movie.title }}{% endblock %}
+
+{% block content %}
+    <h2>{{ movie.title }}</h2>
+    <p><strong>Рік:</strong> {{ movie.year }}</p>
+    <p><strong>Опис:</strong> {{ movie.description|default:"Немає опису" }}</p>
+
+    <br>
+    <a href="{% url 'movies_list' %}">← Назад до списку</a>
+{% endblock %}

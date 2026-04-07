@@ -1,0 +1,20 @@
+{% extends 'movies/base.html' %}
+
+{% block title %}Список фільмів{% endblock %}
+
+{% block content %}
+    <h2>Усі фільми</h2>
+    
+    <ul>
+    {% for movie in movies %}
+        <li>
+            <a href="{% url 'movie_detail' movie.id %}">{{ movie.title }} ({{ movie.year }})</a>
+        </li>
+    {% empty %}
+        <li>Поки що немає фільмів</li>
+    {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{% url 'add_movie' %}">➕ Додати новий фільм</a>
+{% endblock %}

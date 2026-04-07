@@ -1,0 +1,26 @@
+<html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Кінотека{% endblock %}</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        a { color: #0066cc; }
+        .container { max-width: 700px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Кінотека</h1>
+        <p>
+            <a href="{% url 'movies_list' %}">Список фільмів</a> | 
+            <a href="{% url 'add_movie' %}">Додати фільм</a>
+        </p>
+        <hr>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
